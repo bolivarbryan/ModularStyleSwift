@@ -23,6 +23,13 @@ public func styleViewBorder(color: UIColor, width: CGFloat) -> (UIView) -> Void 
     }
 }
 
+public func styleViewWithCorner(_ corner: CGFloat) -> (UIView) -> Void  {
+    return {
+        $0.layer.cornerRadius = corner
+        $0.clipsToBounds = true
+    }
+}
+
 // - MARK: UIView
 
 public let styleViewCircleBase: (UIView) -> Void =
@@ -35,6 +42,18 @@ public let styleViewCircleBase: (UIView) -> Void =
 public let styleViewCircleBorder: (UIView) -> Void =
     styleViewCircleBase
         <> styleViewBorder(color: .darkBlueSystem, width: 4)
+
+public let styleViewDropShadow: (UIView) -> Void =
+    {
+            $0.layer.masksToBounds = false
+            $0.layer.shadowOffset = CGSize(width: 0, height: 2)
+            $0.layer.shadowRadius = 4
+            $0.layer.shadowOpacity = 0.3
+}
+
+public let styleCardView: (UIView) -> Void =
+        styleViewWithCorner(4)
+        <> styleViewDropShadow
 
 // - MARK: UILabel
 
@@ -61,6 +80,11 @@ public let styleLabelRegularFont: (UILabel) -> Void = {
     $0.font = UIFont.systemFont(ofSize: FontSize.normal.rawValue, weight: .regular)
 }
 
+public let styleLabelSmallFont: (UILabel) -> Void = {
+    $0.font = UIFont.systemFont(ofSize: FontSize.small.rawValue, weight: .regular)
+}
+
+
 public let styleLabelCircle: (UILabel) -> Void =
     styleLabelBase
         <> styleViewCircleBorder
@@ -69,6 +93,27 @@ public let styleLabelCircle: (UILabel) -> Void =
 public let styleLabelHeading: (UILabel) -> Void =
     styleBoldLabelLeftBase
         <> styleLabelRegularFont
+        <> {
+            $0.textColor = .darkGray
+}
+
+public let styleLabelSubtitle: (UILabel) -> Void =
+    styleBoldLabelLeftBase
+        <> styleLabelRegularFont
+        <> {
+            $0.textColor = .darkGray
+}
+
+public let styleLabelName: (UILabel) -> Void =
+    styleBoldLabelLeftBase
+        <> styleLabelBigFont
+        <> {
+            $0.textColor = .darkGray
+}
+
+public let styleLabelSmall: (UILabel) -> Void =
+    styleBoldLabelLeftBase
+        <> styleLabelSmallFont
         <> {
             $0.textColor = .darkGray
 }

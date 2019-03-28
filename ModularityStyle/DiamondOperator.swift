@@ -20,3 +20,4 @@ func <> <A: AnyObject>(f: @escaping (A) -> Void, g: @escaping (A) -> Void) -> (A
         g(a)
     }
 }
+

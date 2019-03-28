@@ -25,6 +25,7 @@
 		F4AABEB62245747100049E0A /* DiamondOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AABE8F2245731C00049E0A /* DiamondOperator.swift */; };
 		F4AABEB72245747100049E0A /* UIColor+Pallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AABE8B224572B200049E0A /* UIColor+Pallette.swift */; };
 		F4AABEBC2245786800049E0A /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AABEBB2245786800049E0A /* ContactTableViewCell.swift */; };
+		F4EBEB4F224C44C300AC9F89 /* SpendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBEB4E224C44C300AC9F89 /* SpendingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F4AABEA72245745F00049E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4AABEB9224574E400049E0A /* ModularityPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ModularityPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F4AABEBB2245786800049E0A /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		F4EBEB4E224C44C300AC9F89 /* SpendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4187A748FA17BB87A68A6EDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4AABE5A2245705700049E0A = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +151,7 @@
 				F4AABE972245745F00049E0A /* ModularityStyle */,
 				F4AABEA42245745F00049E0A /* ModularityStyleTests */,
 				F4AABE642245705700049E0A /* Products */,
+				4187A748FA17BB87A68A6EDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +178,7 @@
 				F4AABE6D2245705800049E0A /* ModularityDemo.xcdatamodeld */,
 				F4AABEBB2245786800049E0A /* ContactTableViewCell.swift */,
 				F41C957F2245803100382D54 /* ParagraphTableViewCell.swift */,
+				F4EBEB4E224C44C300AC9F89 /* SpendingTableViewCell.swift */,
 			);
 			path = ModularityDemo;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4AABE862245705A00049E0A /* Build configuration list for PBXNativeTarget "ModularityDemoTests" */;
 			buildPhases = (
+				00A1514FEF5997AFB444903B /* [CP] Check Pods Manifest.lock */,
 				F4AABE762245705A00049E0A /* Sources */,
 				F4AABE772245705A00049E0A /* Frameworks */,
 				F4AABE782245705A00049E0A /* Resources */,
@@ -372,6 +384,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00A1514FEF5997AFB444903B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModularityDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4AABE5F2245705700049E0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -382,6 +419,7 @@
 				F4AABE692245705700049E0A /* ViewController.swift in Sources */,
 				F4AABE6F2245705800049E0A /* ModularityDemo.xcdatamodeld in Sources */,
 				F4AABE672245705700049E0A /* AppDelegate.swift in Sources */,
+				F4EBEB4F224C44C300AC9F89 /* SpendingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,13 +617,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K87XPR878Y;
+				DEVELOPMENT_TEAM = Y76AN85258;
 				INFOPLIST_FILE = ModularityDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bolivar.ModularityDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bolivarbryan.ModularityDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,13 +636,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K87XPR878Y;
+				DEVELOPMENT_TEAM = Y76AN85258;
 				INFOPLIST_FILE = ModularityDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bolivar.ModularityDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bolivarbryan.ModularityDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
